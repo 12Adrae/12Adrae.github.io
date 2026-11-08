@@ -98,8 +98,8 @@ a{color:inherit}
     </div>
     <figure class="photo">
       <span aria-hidden="true">AB</span>
-      <!-- PHOTO : ta photo est dans img/moi.jpeg. Sans elle, les initiales s’affichent. -->
-      <img src="img/moi.jpeg" alt="Portrait d’Adrae Belkhayate" onerror="this.remove()">
+      <!-- PHOTO : le site cherche img/moi.jpeg, puis moi.jpeg à la racine. Sans elle, les initiales s’affichent. -->
+      <img src="img/moi.jpeg" alt="Portrait d’Adrae Belkhayate" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='moi.jpeg'}else{this.remove()}">
     </figure>
   </section>
   </div>
@@ -114,7 +114,7 @@ a{color:inherit}
 
 <b>$</b> terraform plan
  VPC · subnets · security groups · EC2</pre>
-        <img src="img/infra.png" alt="Capture du projet d’infrastructure" onerror="this.remove()">
+        <img src="img/infra.png" alt="Capture du projet d’infrastructure" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='infra.png'}else{this.remove()}">
       </figure>
       <div>
         <h3>Infrastructure multi-tiers conteneurisée &amp; monitorée</h3>
@@ -130,7 +130,7 @@ a{color:inherit}
 cours · révisions
 budget · dépenses et revenus
 bons plans entre étudiants</pre>
-        <img src="img/budgty.png" alt="Capture de BUDGTY" onerror="this.remove()">
+        <img src="img/budgty.png" alt="Capture de BUDGTY" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='budgty.png'}else{this.remove()}">
       </figure>
       <div>
         <h3>BUDGTY</h3>
@@ -147,7 +147,7 @@ bons plans entre étudiants</pre>
 AES · DES · 3DES · Blowfish · Twofish
 RC4 · ChaCha20 · Salsa20
 RSA · MD5 · SHA</pre>
-        <img src="img/cryptorigolo.png" alt="Capture de CRYPTORIGOLO" onerror="this.remove()">
+        <img src="img/cryptorigolo.png" alt="Capture de CRYPTORIGOLO" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='cryptorigolo.png'}else{this.remove()}">
       </figure>
       <div>
         <h3>CRYPTORIGOLO</h3>
@@ -175,7 +175,7 @@ RSA · MD5 · SHA</pre>
     <h2>Mon <span>Expérience</span></h2>
     <div class="cards">
       <article class="card">
-        <div class="logo">J<img src="img/Jumia-Logo.jpg" alt="" onerror="this.remove()"></div>
+        <div class="logo">J<img src="img/Jumia-Logo.jpg" alt="" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='Jumia-Logo.jpg'}else{this.remove()}"></div>
         <div>
           <p class="when">05/2026 – 08/2026</p>
           <p class="what"><u>Jumia Maroc</u> | <strong>Stagiaire Développement Logiciel &amp; DevOps</strong>, Casablanca</p>
@@ -189,7 +189,7 @@ RSA · MD5 · SHA</pre>
         </div>
       </article>
       <article class="card">
-        <div class="logo">A<img src="img/adnef.jpeg" alt="" onerror="this.remove()"></div>
+        <div class="logo">A<img src="img/adnef.jpeg" alt="" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='adnef.jpeg'}else{this.remove()}"></div>
         <div>
           <p class="when">06/2025 – 08/2025</p>
           <p class="what"><u>ADNEF</u> | <strong>Stagiaire Développeur Web, projet FightPlan</strong></p>
@@ -209,7 +209,7 @@ RSA · MD5 · SHA</pre>
     <h2>Ma <span>Formation</span></h2>
     <div class="cards">
       <article class="card">
-        <div class="logo">AMU<img src="img/LOGO_AMU.png" alt="" onerror="this.remove()"></div>
+        <div class="logo">AMU<img src="img/LOGO_AMU.png" alt="" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='LOGO_AMU.png'}else{this.remove()}"></div>
         <div>
           <p class="when">2026 – en cours</p>
           <p class="what"><a href="https://www.univ-amu.fr" target="_blank" rel="noopener">Aix-Marseille Université</a> | <strong>Master 1 Ingénierie du Développement Logiciel</strong></p>
@@ -220,7 +220,7 @@ RSA · MD5 · SHA</pre>
         </div>
       </article>
       <article class="card">
-        <div class="logo">AMU<img src="img/LOGO_AMU.png" alt="" onerror="this.remove()"></div>
+        <div class="logo">AMU<img src="img/LOGO_AMU.png" alt="" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='LOGO_AMU.png'}else{this.remove()}"></div>
         <div>
           <p class="when">2025 – 2026</p>
           <p class="what"><a href="https://www.univ-amu.fr" target="_blank" rel="noopener">Aix-Marseille Université</a> | <strong>Licence 3 Informatique</strong></p>
@@ -228,7 +228,7 @@ RSA · MD5 · SHA</pre>
         </div>
       </article>
       <article class="card">
-        <div class="logo">AMU<img src="img/LOGO_AMU.png" alt="" onerror="this.remove()"></div>
+        <div class="logo">AMU<img src="img/LOGO_AMU.png" alt="" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='LOGO_AMU.png'}else{this.remove()}"></div>
         <div>
           <p class="when">2024 – 2025</p>
           <p class="what"><a href="https://www.univ-amu.fr" target="_blank" rel="noopener">Aix-Marseille Université</a> | <strong>Licence 2 Informatique</strong></p>
@@ -236,7 +236,7 @@ RSA · MD5 · SHA</pre>
         </div>
       </article>
       <article class="card">
-        <div class="logo">AMU<img src="img/LOGO_AMU.png" alt="" onerror="this.remove()"></div>
+        <div class="logo">AMU<img src="img/LOGO_AMU.png" alt="" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='LOGO_AMU.png'}else{this.remove()}"></div>
         <div>
           <p class="when">2023 – 2024</p>
           <p class="what"><a href="https://www.univ-amu.fr" target="_blank" rel="noopener">Aix-Marseille Université</a> | <strong>Licence 1 Informatique – Mathématiques</strong></p>
