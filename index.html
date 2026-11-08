@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adrae Belkhayate Portfolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@800;900&display=swap">
+<style>
+:root{--fg:#111827;--muted:#4B5563;--line:#E5E7EB;--blue:#3B82F6;--green:#16A34A;--soft:#F3F4F6;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--fg);font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.65;padding-top:env(safe-area-inset-top,0px)}
+h1,h2,h3,p,ul,figure{margin:0;padding:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin-inline:auto;padding-inline:max(20px,env(safe-area-inset-left,0px))}
+.bar{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;min-height:60px;gap:16px}
+.brand{font-family:'Playfair Display',serif;font-weight:900;font-size:1.2rem;text-decoration:none}
+.nav{display:none;gap:24px}
+.nav a{font-size:.9rem;color:var(--muted);text-decoration:none}
+.nav a:hover{color:var(--blue)}
+@media(min-width:760px){.nav{display:flex}}
+.herobg{background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='420' viewBox='0 0 600 420'><g stroke='%233B82F6' stroke-opacity='.2' stroke-width='1' fill='none'><path d='M40 60L160 20L260 90L170 150Z M260 90L380 40L470 110L360 170Z M470 110L570 60M170 150L90 250L220 290L360 170M220 290L330 380L470 300L360 170M470 300L560 230L470 110M90 250L30 360L140 400L220 290M330 380L140 400M560 230L590 340L470 300'/></g><g fill='%233B82F6' fill-opacity='.35'><circle cx='40' cy='60' r='2.5'/><circle cx='160' cy='20' r='2.5'/><circle cx='260' cy='90' r='2.5'/><circle cx='170' cy='150' r='2.5'/><circle cx='380' cy='40' r='2.5'/><circle cx='470' cy='110' r='2.5'/><circle cx='360' cy='170' r='2.5'/><circle cx='570' cy='60' r='2.5'/><circle cx='90' cy='250' r='2.5'/><circle cx='220' cy='290' r='2.5'/><circle cx='330' cy='380' r='2.5'/><circle cx='470' cy='300' r='2.5'/><circle cx='560' cy='230' r='2.5'/><circle cx='30' cy='360' r='2.5'/><circle cx='140' cy='400' r='2.5'/><circle cx='590' cy='340' r='2.5'/></g></svg>") center/600px 420px,linear-gradient(180deg,#EAF2FF,#F8FAFF 80%);clip-path:polygon(0 0,100% 0,100% calc(100% - 56px),0 100%);padding-bottom:56px}
+.hero{display:grid;gap:36px;padding-block:64px 24px;align-items:center}
+.hero h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(2.4rem,7vw,4rem);line-height:1.05}
+.hero h1 span,.sec h2 span{color:var(--blue)}
+.hero .role{margin-top:12px;font-weight:600;color:var(--green)}
+.hero .lede{margin-top:16px;max-width:52ch;color:var(--muted);font-size:1.08rem}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;padding:10px 20px;border:1.5px solid var(--blue);border-radius:8px;color:var(--blue);background:#fff;font:inherit;font-weight:600;font-size:.95rem;text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--blue);color:#fff}
+.btn.solid{background:var(--blue);color:#fff}
+.btn.solid:hover{background:#2563EB}
+.photo{position:relative;width:min(100%,240px);aspect-ratio:1;border-radius:50%;background:var(--soft);border:1px solid var(--line);justify-self:center;overflow:hidden}
+.photo span{position:absolute;inset:0;display:grid;place-items:center;font-family:'Playfair Display',serif;font-weight:900;font-size:3.6rem;color:var(--blue)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 50%}
+@media(min-width:800px){.hero{grid-template-columns:1.4fr 1fr;gap:64px}.photo{width:min(100%,280px)}}
+.sec{padding-top:72px;scroll-margin-top:72px}
+.sec h2{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(1.8rem,4vw,2.4rem);text-align:center;margin-bottom:48px}
+.proj{display:grid;gap:24px;align-items:center;margin-bottom:72px}
+.shot{position:relative;aspect-ratio:16/10;border:1px solid var(--line);background:var(--soft);overflow:hidden}
+.shot pre{margin:0;padding:22px;font:.8rem/1.7 ui-monospace,Menlo,Consolas,monospace;color:var(--muted)}
+.shot b{color:var(--blue);font-weight:600}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;background:#fff}
+.proj h3{font-size:1.4rem;font-weight:700}
+.made{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:14px}
+.made strong{color:var(--muted);margin-right:6px}
+.chip{font-size:.8rem;padding:2px 10px;border:1px solid var(--line);border-radius:999px;background:var(--soft)}
+.chip.on{background:#EFF6FF;border-color:#BFDBFE;color:#1D4ED8}
+.proj p.d{margin-top:16px}
+.proj .btn{margin-top:20px}
+@media(min-width:800px){.proj{grid-template-columns:1.2fr 1fr;gap:48px}}
+.cards{max-width:860px;margin-inline:auto;display:grid;gap:4px}
+.card{display:grid;grid-template-columns:1fr;gap:16px;padding:28px;background:#fff;box-shadow:0 1px 8px rgba(17,24,39,.08)}
+.logo{position:relative;display:grid;place-items:center;width:96px;height:64px;border-radius:8px;background:var(--soft);font-family:'Playfair Display',serif;font-weight:900;font-size:1.4rem;color:var(--blue);overflow:hidden}
+.logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff}
+.card .when{font-size:.95rem}
+.card .what{margin-top:2px}
+.card .what a,.card .what u{color:var(--green);text-decoration:underline;text-decoration-color:var(--green)}
+.card .what strong{font-weight:500;text-decoration:underline}
+.card ul{margin-top:10px;padding-left:1.2em;display:grid;gap:4px}
+@media(min-width:700px){.card{grid-template-columns:150px 1fr;gap:28px;align-items:center}.logo{justify-self:center}}
+.skills{max-width:860px;margin-inline:auto}
+.srow{display:grid;gap:10px;padding-block:18px;border-top:1px solid var(--line)}
+.srow:last-child{border-bottom:1px solid var(--line)}
+.srow h3{font-size:1rem;font-weight:600}
+.srow div{display:flex;flex-wrap:wrap;gap:8px}
+.srow .chip{font-size:.9rem;padding:4px 12px}
+.chip.learn{border-style:dashed;background:#fff;color:var(--muted)}
+@media(min-width:760px){.srow{grid-template-columns:200px 1fr}}
+.contact{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.cta{text-align:center;color:var(--muted);margin:0 auto 28px;max-width:56ch}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:64px 48px;color:var(--muted);font-size:.85rem}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top">Adrae Belkhayate</a>
+    <nav class="nav" aria-label="Sections"><a href="#projets">Projets</a><a href="#competences">Compétences</a><a href="#experience">Expérience</a><a href="#formation">Formation</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+
+<main>
+  <div class="herobg">
+  <section class="wrap hero" id="top">
+    <div>
+      <h1>Adrae <span>Belkhayate</span></h1>
+      <p class="role">Étudiante en Master 1 · développement logiciel, DevOps et cloud</p>
+      <p class="lede">Je développe des applications et des API, puis j’apprends à les conteneuriser, les automatiser et les déployer dans le cloud. Je cherche un stage DevOps / Cloud de 3 mois ou plus, à partir d’avril 2027.</p>
+      <div class="row">
+        <a class="btn solid" href="#projets">Voir mes projets</a>
+        <a class="btn" href="https://github.com/12Adrae" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://linkedin.com/in/adrae-belkhayate-7112111b8" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <figure class="photo">
+      <span aria-hidden="true">AB</span>
+      <!-- PHOTO : ta photo est dans img/moi.jpeg. Sans elle, les initiales s’affichent. -->
+      <img src="img/moi.jpeg" alt="Portrait d’Adrae Belkhayate" onerror="this.remove()">
+    </figure>
+  </section>
+  </div>
+
+  <section class="wrap sec" id="projets">
+    <h2>Mes <span>Projets</span></h2>
+
+    <article class="proj">
+      <figure class="shot">
+<pre><b>$</b> docker compose up -d
+ api · prometheus · grafana
+
+<b>$</b> terraform plan
+ VPC · subnets · security groups · EC2</pre>
+        <img src="img/infra.png" alt="Capture du projet d’infrastructure" onerror="this.remove()">
+      </figure>
+      <div>
+        <h3>Infrastructure multi-tiers conteneurisée &amp; monitorée</h3>
+        <div class="made"><strong>Fait avec :</strong><span class="chip on">Docker Compose</span><span class="chip on">Terraform</span><span class="chip on">AWS</span><span class="chip">FastAPI</span><span class="chip">Prometheus</span><span class="chip">Grafana</span></div>
+        <p class="d">Projet personnel en cours (depuis 10/2026). J’ai développé une API FastAPI et conteneurisé une stack à 3 tiers (application, Prometheus, Grafana) avec Docker Compose sous Linux Ubuntu. J’écris maintenant les scripts Terraform qui provisionnent l’infrastructure AWS : VPC, subnets, security groups et instances EC2. Prochaine étape : un pipeline GitHub Actions pour tester, construire et publier les images Docker.</p>
+      </div>
+    </article>
+
+    <article class="proj">
+      <figure class="shot">
+<pre><b>BUDGTY</b>
+
+cours · révisions
+budget · dépenses et revenus
+bons plans entre étudiants</pre>
+        <img src="img/budgty.png" alt="Capture de BUDGTY" onerror="this.remove()">
+      </figure>
+      <div>
+        <h3>BUDGTY</h3>
+        <div class="made"><strong>Fait avec :</strong><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Flask</span><span class="chip">SQLite</span></div>
+        <p class="d">Projet universitaire (01/2025 – 03/2025). Une plateforme web qui centralise la vie étudiante : cours et révisions, suivi du budget et bons plans. J’ai écrit le front-end responsive en HTML, CSS et JavaScript, et le back-end avec Flask et SQLite.</p>
+        <a class="btn" href="https://github.com/12Adrae/BUDGETY" target="_blank" rel="noopener">Code</a>
+      </div>
+    </article>
+
+    <article class="proj">
+      <figure class="shot">
+<pre><b>BONJOUR</b> → chiffrer → ········
+
+AES · DES · 3DES · Blowfish · Twofish
+RC4 · ChaCha20 · Salsa20
+RSA · MD5 · SHA</pre>
+        <img src="img/cryptorigolo.png" alt="Capture de CRYPTORIGOLO" onerror="this.remove()">
+      </figure>
+      <div>
+        <h3>CRYPTORIGOLO</h3>
+        <div class="made"><strong>Fait avec :</strong><span class="chip">Python</span><span class="chip">Tkinter</span><span class="chip">Git</span><span class="chip">Tests unitaires</span></div>
+        <p class="d">Projet universitaire en équipe de 3 (10/2024 – 12/2024). Une application de chiffrement et de hachage qui regroupe 11 algorithmes : par blocs (AES, DES, 3DES, Blowfish, Twofish), par flux (RC4, ChaCha20, Salsa20), asymétrique (RSA) et hachage (MD5, SHA). Nous l’avons construite avec Git (branches, merges, 28 commits), une interface Tkinter pédagogique et des tests unitaires.</p>
+        <a class="btn" href="https://github.com/moiimjolk/CryptoRigolo" target="_blank" rel="noopener">Code</a>
+      </div>
+    </article>
+  </section>
+
+  <section class="wrap sec" id="competences">
+    <h2>Mes <span>Compétences</span></h2>
+    <div class="skills">
+      <div class="srow"><h3>DevOps et CI/CD</h3><div><span class="chip">Docker</span><span class="chip">Docker Compose</span><span class="chip">GitHub Actions</span><span class="chip">GitLab CI</span><span class="chip">Git / GitLab</span><span class="chip">Linux (Ubuntu)</span><span class="chip">Bash</span></div></div>
+      <div class="srow"><h3>Cloud et IaC</h3><div><span class="chip">AWS (EC2, S3, IAM, VPC)</span><span class="chip">Terraform (en cours)</span></div></div>
+      <div class="srow"><h3>Monitoring et réseau</h3><div><span class="chip">Prometheus</span><span class="chip">Grafana</span><span class="chip">Analyse de logs</span><span class="chip">DNS</span><span class="chip">HTTP</span><span class="chip">TCP/IP</span><span class="chip">Firewall</span></div></div>
+      <div class="srow"><h3>En apprentissage</h3><div><span class="chip learn">Kubernetes</span><span class="chip learn">Ansible</span></div></div>
+      <div class="srow"><h3>Langages</h3><div><span class="chip">Python</span><span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">PHP</span><span class="chip">SQL</span><span class="chip">Bash</span></div></div>
+      <div class="srow"><h3>Web et API</h3><div><span class="chip">FastAPI</span><span class="chip">Flask</span><span class="chip">Spring Boot</span><span class="chip">React</span><span class="chip">API REST</span><span class="chip">JWT</span></div></div>
+      <div class="srow"><h3>Bases de données</h3><div><span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">SQLite</span><span class="chip">MLD / UML</span></div></div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="experience">
+    <h2>Mon <span>Expérience</span></h2>
+    <div class="cards">
+      <article class="card">
+        <div class="logo">J<img src="img/Jumia-Logo.jpg" alt="" onerror="this.remove()"></div>
+        <div>
+          <p class="when">05/2026 – 08/2026</p>
+          <p class="what"><u>Jumia Maroc</u> | <strong>Stagiaire Développement Logiciel &amp; DevOps</strong>, Casablanca</p>
+          <ul>
+            <li>Développement et maintenance de fonctionnalités dans une équipe technique, avec Git et GitLab (branches, merge requests).</li>
+            <li>Conteneurisation d’applications avec Docker et environnements de test reproductibles.</li>
+            <li>Amélioration des pipelines CI/CD et automatisation des tests.</li>
+            <li>Scripts Bash pour automatiser des tâches techniques récurrentes.</li>
+            <li>Analyse de logs pour résoudre des incidents, et documentation de maintenance et de déploiement.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="card">
+        <div class="logo">A<img src="img/adnef.jpeg" alt="" onerror="this.remove()"></div>
+        <div>
+          <p class="when">06/2025 – 08/2025</p>
+          <p class="what"><u>ADNEF</u> | <strong>Stagiaire Développeur Web, projet FightPlan</strong></p>
+          <ul>
+            <li>Back-end PHP et SQL d’une application de gestion de tournois, de clubs et de boxeurs.</li>
+            <li>Conception de la base de données (MLD) et modélisation UML des besoins.</li>
+            <li>Import Excel, classement selon le palmarès et génération des combats par algorithme d’appariement.</li>
+            <li>Déploiement sur un hébergement web (PulseHeberg) et participation à la mise en ligne.</li>
+            <li>Développement assisté par IA (ChatGPT, Claude Code) pour générer, modifier et structurer le code.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="formation">
+    <h2>Ma <span>Formation</span></h2>
+    <div class="cards">
+      <article class="card">
+        <div class="logo">AMU<img src="img/LOGO_AMU.png" alt="" onerror="this.remove()"></div>
+        <div>
+          <p class="when">2026 – en cours</p>
+          <p class="what"><a href="https://www.univ-amu.fr" target="_blank" rel="noopener">Aix-Marseille Université</a> | <strong>Master 1 Ingénierie du Développement Logiciel</strong></p>
+          <ul>
+            <li>Parcours : développement logiciel.</li>
+            <li>En parallèle : projet personnel DevOps / cloud (Docker, Terraform, AWS), appris en autodidacte.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="card">
+        <div class="logo">AMU<img src="img/LOGO_AMU.png" alt="" onerror="this.remove()"></div>
+        <div>
+          <p class="when">2025 – 2026</p>
+          <p class="what"><a href="https://www.univ-amu.fr" target="_blank" rel="noopener">Aix-Marseille Université</a> | <strong>Licence 3 Informatique</strong></p>
+          <!-- Ajoute ici 1 ou 2 puces : matières ou projets marquants de l’année -->
+        </div>
+      </article>
+      <article class="card">
+        <div class="logo">AMU<img src="img/LOGO_AMU.png" alt="" onerror="this.remove()"></div>
+        <div>
+          <p class="when">2024 – 2025</p>
+          <p class="what"><a href="https://www.univ-amu.fr" target="_blank" rel="noopener">Aix-Marseille Université</a> | <strong>Licence 2 Informatique</strong></p>
+          <!-- Ajoute ici 1 ou 2 puces -->
+        </div>
+      </article>
+      <article class="card">
+        <div class="logo">AMU<img src="img/LOGO_AMU.png" alt="" onerror="this.remove()"></div>
+        <div>
+          <p class="when">2023 – 2024</p>
+          <p class="what"><a href="https://www.univ-amu.fr" target="_blank" rel="noopener">Aix-Marseille Université</a> | <strong>Licence 1 Informatique – Mathématiques</strong></p>
+          <!-- Ajoute ici 1 ou 2 puces -->
+        </div>
+      </article>
+    </div>
+    <p class="cta" style="margin-top:32px">Langues : français (natif), arabe (natif), anglais (B1).</p>
+  </section>
+
+  <section class="wrap sec" id="contact">
+    <h2>Me <span>Contacter</span></h2>
+    <p class="cta">Disponible à partir d’avril 2027 pour un stage DevOps / Cloud de 3 mois ou plus. Écris-moi, je réponds vite.</p>
+    <div class="contact">
+      <a class="btn solid" href="mailto:BELKHAYATEAdrae@outlook.com">BELKHAYATEAdrae@outlook.com</a>
+      <a class="btn" href="https://github.com/12Adrae" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://linkedin.com/in/adrae-belkhayate-7112111b8" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer class="wrap foot"><span>Adrae Belkhayate · Marseille, France</span><a href="#top">Retour en haut</a></footer>
+</main>
+</body>
+</html>
